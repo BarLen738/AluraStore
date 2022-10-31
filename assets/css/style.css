@@ -1,0 +1,49 @@
+.app {
+    background: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    /*declara como grid al body*/
+    display: grid;
+    /*define las areas como strings con esta propiedad. La estructura de las areas esta definida en el prototipo*/
+    grid-template-areas: 
+    "header"
+    "contenido"
+    "footer";
+    /*el ancho de las columnas es auto, lo determina el ancho total de la pantalla del navegador. Se puede usar vw*/
+    grid-template-columns: auto;
+    /*3 filas (secciones), el header mide 50px, el contenido el 100% del alto visible por navegador y footer se determina en forma automatica. Pueden mezclarse unidades de medida en las definiciones. Tanto de filas como de columnas*/
+    grid-template-rows: 50px auto auto;
+}
+
+.encabezado {
+    /*Declarar cada area en cada clase*/
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    background: #f1f1f1;
+}
+
+.menu__link {
+    color: rgba(128, 128, 128, 0.678);
+    padding: 1.5rem 1rem;
+}
+
+.menu__link:hover, .menu__link:active {
+    border-bottom: 2px solid rgba(0, 0, 255, 0.692);
+}
+
+.contenido {
+    /*Declarar cada area en cada clase*/
+    grid-area: contenido;
+    padding: 0 2rem;
+}
+
+.rodapie { 
+    /*Declarar cada area en cada clase*/
+    grid-area: footer;
+    background-color: #f1f1f1;
+    color: rgba(128, 128, 128, 0.678);
+    padding: 1rem;
+    text-align: center;
+
+}

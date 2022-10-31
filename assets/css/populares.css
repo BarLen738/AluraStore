@@ -1,0 +1,102 @@
+.populares {
+    padding: 3rem 0;
+}
+
+/*Contenedor con TODOS los elementos, declaro una grid dentro y la desgloso en sus divs*/
+.populares__contenido {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: contenido;
+    padding: 1rem 0;
+}
+
+/*div 1 imagen + div 2 contenedor con titulo, fecha y descripcion*/
+.populares__card {
+    background: whitesmoke;
+    /*desglose de grid*/
+    display: grid;
+    /*primero declara areas, despues las desglosa en sus clases*/
+    grid-template-areas: 
+    "card-imagen"
+    "card-base";
+    grid-template-columns: 100%;
+    /*5 columnas - el espacio entre cards*/
+    width: calc(20% - 1rem);
+    /*2 filas*/
+    grid-template-rows: 173px auto;
+    /*espacio entre cards*/
+    margin-right: 1rem;
+}
+
+/*solo imagen*/
+.populares__card___imagen {
+    /*desglose area card-imagen*/
+    grid-area: card-imagen;
+    /*dimensiono*/
+    height: 100%;
+    width: 100%;
+}
+
+/*div 2 contenedor con titulo, fecha, descripcion*/
+.populares__card___base {
+    /*desglose area card-base*/
+    display: grid;
+    grid-area: card-base;
+    grid-row-gap: .5rem;
+    /*declara otra grid para div 1 (titulo + fecha) y div 2 (descripcion)*/
+    grid-template-areas: 
+    "card-header"
+    "card-descripcion";
+    /*2 filas, titulo + fecha ocupan 50px, la escripcion lo restante*/
+    grid-template-rows: 50px auto;
+    padding: 0.75rem;
+}
+
+/*div descripcion*/
+.populares__card___descripcion {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: card-descripcion;
+    padding: 1rem 0rem;
+    color: rgba(0, 0, 0, 0.700);
+    line-height: 1.5;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+.populares__card___titulo {
+    columns: rgba(0, 0, 0, 0.800);
+    font-size: 1.5rem;
+}
+
+.populares__card___data {
+    color: gray;
+    font-size: 0.9rem;
+
+}
+
+.populares__titulo {
+    font-weight: 500;
+}
+
+.populares__icon {
+    margin-right: .25rem;
+}
+
+.populares__header {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.623);
+    display: flex;
+    justify-content: space-between;
+}
+
+.populares__boton {
+    background: transparent;
+    border: none;
+    color: gray;
+}
+
+.populares__card:last-child {
+    margin-right: 0;
+}
+
+
