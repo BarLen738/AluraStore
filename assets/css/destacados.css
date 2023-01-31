@@ -13,7 +13,7 @@
 }
 
 .destaques__principal {
-    background: url("/AluraStore/../img/fortnite.jpg");
+    background: url("/AluraStore/img/fortnite.jpg");
     background-size: cover;
     background-position: center;
     /*para que la imagen no se repita rellenando los espacios que falten*/
@@ -27,25 +27,25 @@
 }
 
 .destaques__secundario:nth-child(2) {
-    background: url("/AluraStore/../img/pubg.jpg") center / cover no-repeat;
+    background: url("/AluraStore/img/pubg.jpg") center / cover no-repeat;
     grid-column: 4 / 5;
     grid-row: 1 / 2;
 }
 
 .destaques__secundario:nth-child(3) {
-    background: url("/AluraStore/../img/slack.png") center / cover no-repeat;
+    background: url("/AluraStore/img/slack.png") center / cover no-repeat;
     grid-column: 4 / 5;
     grid-row: 2 / 3;
 } 
 
 .destaques__secundario:nth-child(4) {
-    background: url("/AluraStore/../img/whatsapp.png") center / cover no-repeat;
+    background: url("/AluraStore/img/whatsapp.png") center / cover no-repeat;
     grid-column: 4 / 5;
     grid-row: 3 / 4;
 }
 
 .destaques__secundario:nth-child(5) {
-    background: url("/AluraStore/../img/cs-go.jpg") center / cover no-repeat;
+    background: url("/AluraStore/img/cs-go.jpg") center / cover no-repeat;
     grid-column: 3 / 4;
     grid-row: 3 / 4;
 }
